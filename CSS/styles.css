@@ -172,6 +172,15 @@ a {
   fill: var(--color-primary);
 }
 
+.icon__white {
+  fill: white;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon-container {
   background: #f3f9fa;
   width: 64px;
@@ -180,6 +189,10 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container__accent {
+  background: var(--color-accent);
 }
 
 /**************************************Buttons******************************************/
@@ -397,7 +410,6 @@ a {
 }
 
 .quote__hyphen {
-  margin-left: 40px;
   position: relative;
   bottom: 10px;
 }
@@ -435,7 +447,6 @@ a {
 .grid {
   display: grid;
 }
-
 @media screen and (min-width: 768px) {
   .grid--cols-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -445,5 +456,35 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--cols-3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*****************************************testimonial************************************/
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+.testimonial {
+  padding: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__title {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }

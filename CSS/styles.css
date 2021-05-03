@@ -336,6 +336,19 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular .card__header {
+  position: relative;
+}
+
+.plan--popular .card__header::before {
+  content: url(../Images/popular.svg);
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  top: -5px;
+  right: 5%;
+}
+
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;

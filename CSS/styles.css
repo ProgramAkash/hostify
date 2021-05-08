@@ -337,12 +337,19 @@ a {
   background: #02cdf1;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
 /******************************************plans***************************************/
 .plan__name {
   color: white;
   margin: 0;
   font-weight: 500;
   font-size: 2.4rem;
+}
+
+.plan {
+  transition: transform 0.2s ease-out;
 }
 
 .plan__price {
@@ -367,6 +374,18 @@ a {
 
 .plan--popular .card__header {
   position: relative;
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 .plan--popular .card__header::before {
@@ -723,4 +742,14 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     font-size: 1.5rem;
   }
+}
+
+/********************************planblock***********/
+.block__plan .grid {
+  gap: 8rem 4rem;
+}
+
+.block__plan .card {
+  max-width: 500px;
+  margin: 0 auto;
 }

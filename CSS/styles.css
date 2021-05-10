@@ -15,6 +15,11 @@
 
 /***************************************** Typography ************************************/
 
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
 html {
   /* Default font size of the browser is 16px, so 62.5% of 16px is 10px */
   font-size: 62.5%;
@@ -45,6 +50,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -138,7 +144,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -149,6 +154,7 @@ a {
 .list--tick {
   list-style-image: url(../Images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -418,6 +424,7 @@ a {
 /******************************************Media******************************************/
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__title {
@@ -605,7 +612,10 @@ a {
   background: black;
   color: #7b858b;
 }
-.block__dark .block__heading {
+.block__dark h1,
+.block__dark h2,
+.block__dark h3,
+.block__dark h4 {
   color: white;
 }
 
@@ -614,12 +624,12 @@ a {
 }
 
 .block--skewed-right {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
@@ -690,10 +700,6 @@ a {
 }
 
 /******************************************hero******************************************/
-
-.hero {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
 
 .hero__tagline {
   font-size: 2rem;
@@ -775,5 +781,24 @@ a {
 @media screen and (min-width: 768px) {
   .features:nth-of-type(even) .feature__content {
     order: 2;
+  }
+}
+/*******************************showcase block*******************************************/
+.block-showcase__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block__showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }

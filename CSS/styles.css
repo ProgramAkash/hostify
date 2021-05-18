@@ -212,7 +212,7 @@ a {
   font-size: 1.8rem;
   text-align: center;
   font-weight: 600;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   outline: 0;
   text-align: center;
   text-transform: uppercase;
@@ -304,6 +304,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -534,6 +535,8 @@ a {
 .callout {
   padding: 4rem;
   border-radius: 5px;
+  margin-top: 10rem;
+  overflow: visible;
 }
 .callout--primary {
   background: var(--color-primary);
@@ -732,8 +735,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   color: var(--color-headings);
   font-weight: 600;
@@ -806,6 +810,7 @@ a {
 /*****************************************footerblock************************************/
 .footer {
   background: #232323;
+  overflow: hidden;
 }
 .collapsible__content > ul {
   margin-top: 0;
